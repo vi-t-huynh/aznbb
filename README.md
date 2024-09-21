@@ -1,7 +1,3 @@
-## ⚠️ Disclaimer
-
--   **Not a Real Store:** Plantify is a demo application for educational purposes and does not represent a functioning eCommerce store. Transactions and inventory management are not real.
-
 # 🪴 Plantify
 
 Welcome to Plantify, a sleek and simple eCommerce platform for plant enthusiasts. Plantify offers a seamless way to browse and purchase a variety of plants.
@@ -37,6 +33,10 @@ $ npm run dev
 
 -   [ ] Currently focused on building out the frontend. (est: October, 2024)
 
-Note: If you do not have an API key, some features may not work as intended. Some functionality requires user to create a `.env` file with the necessary api key.
+## ⚠️ Disclaimer
 
-README Last Updated: 09/21/2024
+-   **Not a Real Store:** Plantify is a demo application for educational purposes and does not represent a functioning eCommerce store. Transactions and inventory management are not real.
+
+**Note**: If you do not have an API key, some features may not work as intended. Some functionality requires user to create a `.env` file with the necessary api key.
+
+**REAMME.md Last Updated**: 09/21/2024
