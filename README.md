@@ -31,7 +31,7 @@ $ npm run dev
 
 ## 📋 Current Objective
 
-Currently focused on building out the frontend.
+-   [ ] Currently focused on building out the frontend. (est: October, 2024)
 
 ## 🚧 Future Enhancements
 
@@ -39,3 +39,5 @@ Currently focused on building out the frontend.
 -   Adding user authentication for personalized experiences.
 -   Implementing advanced filtering and search functionalities.
 -   TypeScript integration to improve type safety and developer experience.
+
+README Last Updated: 09/21/2024
