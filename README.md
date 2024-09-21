@@ -29,6 +29,10 @@ $ npm install
 $ npm run dev
 ```
 
+## 📋 Current Objective
+
+Currently focused on building out the frontend.
+
 ## 🚧 Future Enhancements
 
 -   Backend integration for real-time inventory and order management.
