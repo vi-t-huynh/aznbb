@@ -1,6 +1,6 @@
-# 🪴 Plant Paradise
+# 🪴 Plantify
 
-Welcome to Paradise, a sleek and simple eCommerce platform for plant enthusiasts. Paradise offers a seamless way to browse and purchase a variety of plants and accessories, all in one place.
+Welcome to Plantify, a sleek and simple eCommerce platform for plant enthusiasts. Plantify offers a seamless way to browse and purchase a variety of plants.
 
 ## 🚀 Features
 
@@ -16,15 +16,15 @@ Welcome to Paradise, a sleek and simple eCommerce platform for plant enthusiasts
 
 ## 🎯 Purpose
 
-Plant Paradise is built to showcase a clean and functional eCommerce experience, utilizing modern front-end technologies to deliver an efficient shopping platform.
+Plantify is built to showcase a clean and functional eCommerce experience, utilizing modern front-end technologies to deliver an efficient shopping platform.
 
 ## 🛠️ Installation
 
 To get the app running locally, follow these steps:
 
 ```bash
-$ git clone https://github.com/vi-t-huynh/plant-paradise.git
-$ cd plant-paradise
+$ git clone https://github.com/vi-t-huynh/plantify.git
+$ cd plantify
 $ npm install
 $ npm run dev
 ```
