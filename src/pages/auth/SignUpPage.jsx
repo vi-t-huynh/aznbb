@@ -3,7 +3,7 @@ import AuthForm from "./AuthForm/authIndex";
 const SIGN_UP_FIELDS = [
     { label: "username", type: "text" },
     { label: "password", type: "password" },
-    { label: "confirm password", type: "confirm password" },
+    { label: "confirm password", type: "password" },
 ];
 const SignOutPage = () => {
     return (
