@@ -16,7 +16,7 @@ Welcome to Paradise, a sleek and simple eCommerce platform for plant enthusiasts
 
 ## 🎯 Purpose
 
-Paradise is built to showcase a clean and functional eCommerce experience, utilizing modern front-end technologies to deliver an efficient shopping platform.
+Plant Paradise is built to showcase a clean and functional eCommerce experience, utilizing modern front-end technologies to deliver an efficient shopping platform.
 
 ## 🛠️ Installation
 
@@ -34,3 +34,4 @@ $ npm run dev
 -   Backend integration for real-time inventory and order management.
 -   Adding user authentication for personalized experiences.
 -   Implementing advanced filtering and search functionalities.
+-   TypeScript integration to improve type safety and developer experience.

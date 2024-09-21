@@ -7,7 +7,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<SignInPage />} />
-                <Route path="/sign-out" element={<SignOutPage />} />
+                <Route path="/sign-up" element={<SignOutPage />} />
             </Routes>
         </BrowserRouter>
     );
