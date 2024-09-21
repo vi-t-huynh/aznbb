@@ -1,4 +1,6 @@
 import AuthForm from "./AuthForm/authIndex";
+import FormContainer from "./FormContainer";
+import { Link } from "react-router-dom";
 
 const SIGN_UP_FIELDS = [
     { label: "username", type: "text" },
@@ -7,14 +9,15 @@ const SIGN_UP_FIELDS = [
 ];
 const SignOutPage = () => {
     return (
-        <div className="flex justify-center items-center bg-gray-100 min-h-screen">
-            <div className="flex justify-center w-full max-w-4xl">
-                <AuthForm
-                    fields={SIGN_UP_FIELDS}
-                    submitButtonText="create an account"
-                />
-            </div>
-        </div>
+        <FormContainer>
+            <AuthForm
+                fields={SIGN_UP_FIELDS}
+                submitButtonText="create an account"
+            />
+            <Link to="/" className="text-green-800 hover:underline">
+                sign in
+            </Link>
+        </FormContainer>
     );
 };
 

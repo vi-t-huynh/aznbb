@@ -1,4 +1,6 @@
 import AuthForm from "./AuthForm/authIndex";
+import FormContainer from "./FormContainer";
+import { Link } from "react-router-dom";
 
 const SIGN_IN_FIELDS = [
     { label: "username", type: "text" },
@@ -7,11 +9,12 @@ const SIGN_IN_FIELDS = [
 
 const SignInPage = () => {
     return (
-        <div className="flex justify-center items-center bg-gray-100 min-h-screen">
-            <div className="flex justify-center w-full max-w-4xl">
-                <AuthForm fields={SIGN_IN_FIELDS} submitButtonText="sign in" />
-            </div>
-        </div>
+        <FormContainer>
+            <AuthForm fields={SIGN_IN_FIELDS} submitButtonText="sign in" />
+            <Link to="/sign-up" className="text-green-800 hover:underline">
+                create an account
+            </Link>
+        </FormContainer>
     );
 };
 
