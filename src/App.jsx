@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignInPage from "./pages/auth/SignInPage";
-import SignOutPage from "./pages/auth/SignUpPage";
+import SignUpPage from "./pages/auth/SignUpPage";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<SignInPage />} />
-                <Route path="/sign-up" element={<SignOutPage />} />
+                <Route path="/sign-up" element={<SignUpPage />} />
             </Routes>
         </BrowserRouter>
     );
