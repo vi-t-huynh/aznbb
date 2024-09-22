@@ -1,7 +1,7 @@
 import AuthForm from "./AuthForm/authIndex";
 import FormContainer from "./FormContainer";
-import { Link } from "react-router-dom";
-import { createUser } from "../../services/user";
+import { Link, useNavigate } from "react-router-dom";
+import { createUser } from "services/user";
 import { useState } from "react";
 
 const SIGN_UP_FIELDS = [
@@ -11,29 +11,30 @@ const SIGN_UP_FIELDS = [
 ];
 const SignUpPage = () => {
     const [error, setError] = useState("");
-    const [success, setSuccess] = useState("");
+    const navigate = useNavigate();
     return (
         <FormContainer>
-            <p className="text-red-400">{error}</p>
-            <p className="text-green-400">{success}</p>
+            {error && (
+                <p className="text-red-500 bg-red-200 px-3 py-2 rounded">
+                    {error}
+                </p>
+            )}{" "}
             <AuthForm
                 fields={SIGN_UP_FIELDS}
-                submitButtonText="create an account"
+                submitButtonText="Create an Account"
                 onSubmit={async (values) => {
-                    setSuccess("");
-                    setError("");
                     if (values.username.length < 4) {
-                        setError("username must be greater than 4 letters");
+                        setError("Username must be greater than 4 letters.");
                         return;
                     }
 
                     if (values.password.length < 4) {
-                        setError("password must be greater than 8 letters");
+                        setError("Password must be greater than 8 letters.");
                         return;
                     }
 
                     if (values.password != values["confirm password"]) {
-                        setError("password does not match");
+                        setError("Password does not match.");
                         return;
                     }
 
@@ -43,16 +44,19 @@ const SignUpPage = () => {
                     });
 
                     if (response.status == 201) {
-                        setSuccess("account has been created successfully");
-                        return;
+                        setError("");
+                        navigate("/", {
+                            state: {
+                                accountCreated: true,
+                            },
+                        });
                     } else {
-                        setError("account has already been created");
-                        return;
+                        setError("Account has already been created.");
                     }
                 }}
             />
             <Link to="/" className="text-green-800 hover:underline">
-                sign in
+                Sign In
             </Link>
         </FormContainer>
     );
