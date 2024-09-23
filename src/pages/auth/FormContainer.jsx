@@ -4,10 +4,10 @@ const FormContainer = (props) => {
     const { children } = props;
     return (
         <div className="flex">
-            <div className="relative hidden md:block">
+            <div className="relative hidden md:block md:w-2/3">
                 <img
                     src="assets/authform-scene.png"
-                    className="h-screen object-cover"
+                    className="h-screen object-cover w-full"
                 />
                 <div className="top-0 left-0 w-full absolute bg-green-800/40 h-screen"></div>
             </div>
