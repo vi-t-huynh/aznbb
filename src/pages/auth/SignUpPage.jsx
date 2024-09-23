@@ -1,7 +1,7 @@
 import AuthForm from "./AuthForm/authIndex";
 import FormContainer from "./FormContainer";
 import { Link, useNavigate } from "react-router-dom";
-import { createUser } from "services/user";
+import * as UserService from "services/user";
 import { useState } from "react";
 
 const SIGN_UP_FIELDS = [
@@ -38,7 +38,7 @@ const SignUpPage = () => {
                         return;
                     }
 
-                    const response = await createUser({
+                    const response = await UserService.createUser({
                         username: values.username,
                         password: values.password,
                     });

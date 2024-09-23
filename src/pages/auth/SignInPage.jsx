@@ -1,8 +1,9 @@
-import { createSession } from "services/user";
+import * as UserService from "services/user";
 import AuthForm from "./AuthForm/authIndex";
 import FormContainer from "./FormContainer";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { SessionContext } from "context/SessionContext";
 
 const SIGN_IN_FIELDS = [
     { label: "username", type: "text" },
@@ -12,6 +13,8 @@ const SIGN_IN_FIELDS = [
 const SignInPage = () => {
     const [error, setError] = useState("");
     const location = useLocation();
+    const { signIn } = useContext(SessionContext);
+
     return (
         <FormContainer>
             {error && (
@@ -28,15 +31,16 @@ const SignInPage = () => {
                 fields={SIGN_IN_FIELDS}
                 submitButtonText="sign in"
                 onSubmit={async (values) => {
-                    const response = await createSession({
+                    const response = await UserService.createSession({
                         username: values.username,
                         password: values.password,
                     });
+                    const data = await response.json();
                     if (response.status == 201) {
-                        console.log("log in success!");
+                        signIn(data.capstone_session_token);
                         setError("");
                     } else {
-                        setError((await response.json()).error);
+                        setError(data.error);
                     }
                 }}
             />
