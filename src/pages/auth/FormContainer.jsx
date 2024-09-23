@@ -13,7 +13,7 @@ const FormContainer = (props) => {
             </div>
             <div className="flex flex-col w-full justify-center items-center gap-6 bg-green-50/80 min-h-screen">
                 <Link to="/">
-                    <img src="assets/authform-logo.png" className="w-24" />
+                    <img src="assets/logo.png" className="w-24" />
                 </Link>
                 <h1 className="text-green-800 font-playfair text-4xl mb-6">
                     Plantify
