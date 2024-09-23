@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignInPage from "pages/auth/SignInPage";
 import SignUpPage from "pages/auth/SignUpPage";
+import PlantListPage from "pages/PlantListPage/index";
 import { useState } from "react";
 import * as UserService from "services/user";
 import { SessionContext } from "context/SessionContext";
@@ -22,13 +23,16 @@ function App() {
                     setSessionToken(null);
                     UserService.removeSessionToken();
                 },
-                username: sessionToken ? jwtDecode(sessionToken) : null,
+                username: sessionToken
+                    ? jwtDecode(sessionToken).username
+                    : null,
             }}
         >
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<SignInPage />} />
                     <Route path="/sign-up" element={<SignUpPage />} />
+                    <Route path="/plants" element={<PlantListPage />} />
                 </Routes>
             </BrowserRouter>
         </SessionContext.Provider>
