@@ -1,5 +1,6 @@
 import { SessionContext } from "context/SessionContext";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     const { username, signOut } = useContext(SessionContext);
@@ -14,7 +15,9 @@ const NavBar = () => {
         >
             <div className="flex justify-between w-full max-w-4xl text-white font-playfair p-2">
                 <div className="flex items-center space-x-2">
-                    <img src="assets/logo-light.png" className="w-10" />
+                    <Link to="/plants">
+                        <img src="assets/logo-light.png" className="w-10" />
+                    </Link>
                     <p className="text-2xl">Plantify</p>
                 </div>
                 <div className="flex items-center justify-end font-lato text-white/80 min-w-24">
