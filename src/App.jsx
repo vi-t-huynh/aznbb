@@ -6,6 +6,7 @@ import { useState } from "react";
 import * as UserService from "services/user";
 import { SessionContext } from "context/SessionContext";
 import { jwtDecode } from "jwt-decode";
+import PlantShowPage from "pages/PlantShowPage";
 
 function App() {
     const [sessionToken, setSessionToken] = useState(() =>
@@ -33,6 +34,10 @@ function App() {
                     <Route path="/" element={<SignInPage />} />
                     <Route path="/sign-up" element={<SignUpPage />} />
                     <Route path="/plants" element={<PlantListPage />} />
+                    <Route
+                        path="/plants/:plantId"
+                        element={<PlantShowPage />}
+                    />
                 </Routes>
             </BrowserRouter>
         </SessionContext.Provider>
