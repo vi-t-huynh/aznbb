@@ -1,6 +1,6 @@
 # 🪴 Plantify
 
-Welcome to Plantify, a sleek and simple eCommerce platform for plant enthusiasts. Plantify offers a seamless way to browse and purchase a variety of plants.
+Plantify is a responsive eCommerce platform for plant enthusiasts, offering a seamless browsing and purchasing experience.
 
 ## 🚀 Features
 
@@ -16,17 +16,41 @@ Welcome to Plantify, a sleek and simple eCommerce platform for plant enthusiasts
 
 ## 🎯 Purpose
 
-Plantify is built to showcase a clean and functional eCommerce experience, utilizing modern front-end technologies to deliver an efficient shopping platform.
+Plantify demonstrates proficiency in modern front-end development, showcasing:
+
+-   Component-based architecture
+-   Responsive design implementation
+-   State management in React
+-   API integration
 
 ## 🛠️ Installation
 
 To get the app running locally, follow these steps:
 
-```bash
-$ git clone https://github.com/vi-t-huynh/plantify.git
-$ cd plantify
-$ npm install
-$ npm run dev
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/vi-t-huynh/plantify.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd plantify
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory with:
+
+```javascript
+VITE_API_BASE_URL = your_api_base_url;
+VITE_API_KEY = your_api_key;
 ```
 
 ## 📋 Current Objective
@@ -35,8 +59,8 @@ $ npm run dev
 
 ## ⚠️ Disclaimer
 
--   **Not a Real Store:** Plantify is a demo application for educational purposes and does not represent a functioning eCommerce store. Transactions and inventory management are not real.
+Plantify is a demo application for educational and portfolio purposes. It does not represent a real eCommerce store.
 
-**Note**: If you do not have an API key, some features may not work as intended. Some functionality requires user to create a `.env` file with the necessary api key.
+## 📅 Last Updated
 
-**REAMME.md Last Updated**: 09/21/2024
+September 25, 2024
