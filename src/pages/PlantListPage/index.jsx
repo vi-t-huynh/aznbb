@@ -3,6 +3,7 @@ import RedirectToSigninIfSignedOut from "shared-components/RedirectToSigninIfSig
 import { useEffect, useState } from "react";
 import * as PlantService from "services/plants";
 import PlantItem from "./PlantItem";
+import LoadingSpinner from "shared-components/LoadingSpinner";
 
 const PlantListPage = () => {
     const [loading, setLoading] = useState(false);
@@ -23,18 +24,15 @@ const PlantListPage = () => {
             <div className="flex flex-col items-center min-h-screen bg-green-50">
                 <NavBar />
                 {loading ? (
-                    <div className="mt-24">
-                        <i className="text-4xl fa-thin fa-spinner-third animate-spin text-green-800"></i>
-                    </div>
+                    <LoadingSpinner />
                 ) : (
                     <div className="w-full max-w-4xl mt-12">
-                        <h1 className="text-green-800 text-4xl font-playfair mx-4">
+                        <h1 className="text-green-800 text-4xl font-playfair mx-4 flex md:justify-start justify-center">
                             Plants In Stock
                         </h1>
                         <div className="flex flex-wrap justify-center gap-16 mt-8">
                             {plants.map((ele) => {
-                                console.log(ele);
-                                return <PlantItem plant={ele} key={ele.id} />;
+                                return <PlantItem plant={ele} key={ele.name} />;
                             })}
                         </div>
                     </div>
