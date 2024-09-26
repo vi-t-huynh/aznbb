@@ -60,11 +60,6 @@ VITE_API_BASE_URL = your_api_base_url;
 VITE_API_KEY = your_api_key;
 ```
 
-## 📋 Current Objective
-
--   [x] Currently focused on building out the frontend. (est: October, 2024)
--   [ ] Integrate custom backend (est: unknown)
-
 ## ⚠️ Disclaimer
 
 Plantify is a demo application for educational and portfolio purposes. It does not represent a real eCommerce store.
