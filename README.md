@@ -8,20 +8,20 @@ Plantify is a responsive eCommerce platform for plant enthusiasts, offering a se
 -   Cart & Checkout: A smooth shopping experience with easy-to-use cart and checkout features.
 -   Responsive Design: Optimized for all devices, ensuring a great experience across any screen size.
 
-## 🔧 Tech Stack
+## 🔧 Tech Stack / Libraries
 
 -   React: The core framework for building interactive user interfaces.
 -   Tailwind CSS: Utility-first CSS framework for quick and responsive styling.
 -   React Router: Enables smooth navigation between different sections of the shop.
+-   Framer Motion: Adds smooth animations to the UI.
 
-## 🎯 Purpose
+## 🌟 Key Features
 
-Plantify demonstrates proficiency in modern front-end development, showcasing:
-
--   Component-based architecture
--   Responsive design implementation
--   State management in React
--   API integration
+-   Responsive design for mobile and desktop
+-   Interactive product browsing with image zoom
+-   Dynamic cart functionality
+-   Smooth animations and transitions
+-   Secure user authentication
 
 ## 🛠️ Installation
 
@@ -29,7 +29,7 @@ To get the app running locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/vi-t-huynh/plantify.git
+    git clone https://github.com/your-username/plantify.git
     ```
 2. Navigate to the project directory:
     ```bash
@@ -39,7 +39,14 @@ To get the app running locally, follow these steps:
     ```bash
     npm install
     ```
-4. Start the development server:
+4. Set up environment variables:
+    - Create a `.env` file in the root directory
+    - Add the following variables:
+        ```
+        VITE_API_BASE_URL=your_api_base_url
+        VITE_API_KEY=your_api_key
+        ```
+5. Start the development server:
     ```bash
     npm run dev
     ```
@@ -55,7 +62,8 @@ VITE_API_KEY = your_api_key;
 
 ## 📋 Current Objective
 
--   [ ] Currently focused on building out the frontend. (est: October, 2024)
+-   [x] Currently focused on building out the frontend. (est: October, 2024)
+-   [ ] Integrate custom backend (est: unknown)
 
 ## ⚠️ Disclaimer
 
