@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import * as PlantService from "services/plants";
 import PlantItem from "./PlantItem";
 import LoadingSpinner from "shared-components/LoadingSpinner";
+import { motion } from "framer-motion";
 
 const PlantListPage = () => {
     const [loading, setLoading] = useState(false);
@@ -31,8 +32,27 @@ const PlantListPage = () => {
                             Plants In Stock
                         </h1>
                         <div className="flex flex-wrap justify-center gap-16 mt-8">
-                            {plants.map((ele) => {
-                                return <PlantItem plant={ele} key={ele.name} />;
+                            {plants.map((ele, index) => {
+                                return (
+                                    <motion.div
+                                        key={ele.name}
+                                        initial={{
+                                            opacity: 0,
+                                            traslateY: "20px",
+                                        }}
+                                        whileInView={{
+                                            opacity: 1,
+                                            traslateY: 0,
+                                        }}
+                                        viewport={{ once: true }}
+                                        transition={{
+                                            delay: (index % 3) * 0.2,
+                                            duration: 0.4,
+                                        }}
+                                    >
+                                        <PlantItem plant={ele} />
+                                    </motion.div>
+                                );
                             })}
                         </div>
                     </div>

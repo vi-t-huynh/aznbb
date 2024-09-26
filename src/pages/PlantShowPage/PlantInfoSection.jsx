@@ -2,6 +2,8 @@ import { useState } from "react";
 import BenefitBox from "./BenefitBox";
 import PlantHeading from "./PlantHeading";
 import PlantPurchaseOption from "./PlantPurchaseOptions";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import { addPlantToCart } from "services/cart";
 
 const PlantInfoSection = (props) => {
@@ -18,7 +20,9 @@ const PlantInfoSection = (props) => {
                 </p>
             </div>
             <div className="flex flex-col items-center flex-1 mx-6">
-                <img src={plant.images[idx].src} className="rounded-lg" />
+                <Zoom>
+                    <img src={plant.images[idx].src} className="rounded-lg" />
+                </Zoom>
                 <div className="flex mt-4">
                     <BenefitBox
                         icon="fa-regular fa-circle-check"
