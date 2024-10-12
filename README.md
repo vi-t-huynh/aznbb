@@ -4,14 +4,9 @@ Plantify is a responsive eCommerce platform for plant enthusiasts, offering a se
 
 **Desktop and Mobile Preview:**
 
-<div style="display: flex; width: 90%;">
-    <div style="flex: 2;">
-        <img src="./public/web-preview.gif" alt="Web Preview" style="width: 95%; height: 80%;">
-    </div>
-    <div style="flex: 1;">
-        <img src="./public/mobile-preview.gif" alt="Mobile Preview" style="width: 85%%; height: 80%;">
-    </div>
-</div>
+| Desktop Preview | Mobile Preview |
+|-----------------|----------------|
+| <img src="./public/web-preview.gif" alt="Web Preview" width="400"> | <img src="./public/mobile-preview.gif" alt="Mobile Preview" width="200"> |
 
 ## 🚀 Features
 
